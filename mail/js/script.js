@@ -18,18 +18,19 @@ let emails = ['pippo@gmail.com', 'tony@live.it', 'pancrazio.outlook.com', 'pasqu
 //utilizziamo la costante'submitDomElement' per agganciare un event listener che prende il click
 submitDomElement.addEventListener('click', function () {
     //dichiaro una variabile di controllo 'emailsInArray per verificare la presenza del valore
+    //dichiariamo la costante emailDomElement in modo che ci restituisca il valore
+    const emailDomElement = document.getElementById('email').value;
     let emailsInArray = false;
     // costruiamo un ciclo che scorra tutto l'array
     for (let i = 0; i < emails.length; i++) {
         //costuiamo una funzione che prenda il valore dal campo email del DOM e ce lo restituisca in console
-        //dichiariamo la costante emailDomElement in modo che ci restituisca il valore
-        const emailDomElement = document.getElementById('email').value;
+        
         //console.log(emailDomElement);
 
         const email = emails[i];
 
        
-        console.log(email);
+        console.log(emailDomElement);
 
         //impostiamo la condizione in modo che SE nella costante emailDomElement compare uno dei nomi cambia il valore della variabile di controllo
         if (emailDomElement === email) {
